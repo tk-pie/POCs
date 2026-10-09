@@ -4,7 +4,9 @@
 
 mod nice_view;
 
+use alloc::format;
 use embassy_executor::Spawner;
+use embassy_time::{Duration, Timer};
 use esp_backtrace as _;
 use esp_hal::gpio::{InputConfig, OutputConfig};
 use esp_hal::spi::Mode;
@@ -16,7 +18,7 @@ use esp_hal::{
     spi::{self, master::Spi},
 };
 use nice_view::NiceView;
-use niceview_lib::{Icon, KeyboardDisplay, TextVariant};
+use niceview_lib::{KeyboardDisplay, TextVariant};
 
 extern crate alloc;
 
@@ -73,15 +75,25 @@ async fn main(_spawner: Spawner) -> ! {
 
     nice_view.clear_display().await;
     nice_view.fill_white();
-
-    nice_view.draw_text("HELLO WORLD!", 10, 10, TextVariant::Regular);
-
-    nice_view.draw_icon(Icon::BatteryFull, 40, 40);
-
     nice_view.flush().await;
+
+    let mut seconds = 0;
+    let mut millis = 0;
+
+    let sleep_time = 100;
 
     loop {
         nice_view.fill_white();
+        nice_view.draw_text("Your move Yoda", 10, 20, TextVariant::LargeBold);
+        nice_view.draw_text(&format!("{}", seconds), 78, 40, TextVariant::LargeBold);
+        nice_view.flush().await;
+
+        Timer::after(Duration::from_millis(sleep_time)).await;
+        millis += sleep_time;
+        if millis >= 1000 {
+            seconds += 1;
+            millis -= 1000;
+        }
     }
 }
 
