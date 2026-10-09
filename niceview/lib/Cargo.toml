@@ -1,0 +1,16 @@
+[package]
+name = "niceview-lib"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+log = "0.4.26"
+eg-bdf = { git = "https://github.com/embedded-graphics/bdf", rev = "1527e39966d3d7fca698c29699752fbb66ae5bfa" }
+embedded-graphics = "0.8.1"
+zerocopy = { version = "0.8.25", features = ["derive", "zerocopy-derive"] }
+
+[build-dependencies]
+eg-font-converter = { git = "https://github.com/embedded-graphics/bdf", rev = "1527e39966d3d7fca698c29699752fbb66ae5bfa" }
+quote = "1.0.40"
+proc-macro2 = "1.0.95"
+rust-format = "0.3.4"

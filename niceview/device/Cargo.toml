@@ -1,0 +1,30 @@
+[package]
+name = "niceview-device"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+esp-backtrace = { version = "0.20.0", features = [
+    "esp32c6",
+    "panic-handler",
+    "println",
+] }
+esp-hal = { version = "~1.2.2", features = ["esp32c6", "unstable"] }
+esp-println = { version = "0.18.0", features = ["esp32c6", "log-04"] }
+log = { version = "0.4.34" }
+esp-alloc = { version = "0.11.0" }
+embedded-io = "0.7.1"
+heapless = { version = "0.9.3", default-features = false }
+embassy-executor = { version = "0.10.0" }
+embassy-time = { version = "0.5.1" }
+esp-rtos = { version = "0.4.0", features = ["embassy", "esp32c6", "log-04", "esp-alloc"]}
+static_cell = "2.1.1"
+rand_core = "0.10.1"
+embedded-hal-async = "1.0.0"
+embedded-hal = "1.0.0"
+display-interface = "0.5.0"
+esp-sync = { version = "0.3.0", features = ["esp32c6", "log-04"] }
+
+niceview-lib = { workspace = true }
+riscv = "0.16.1"
+esp-bootloader-esp-idf = { version = "0.6.0", features = ["esp32c6"] }

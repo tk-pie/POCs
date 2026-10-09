@@ -1,0 +1,408 @@
+Chip type:         esp32c6 (revision v0.0)
+Crystal frequency: 40 MHz
+Flash size:        4MB
+Features:          WiFi 6, BT 5
+MAC address:       40:4c:ca:43:16:28
+App/part. size:    411,008/4,128,768 bytes, 9.95%
+Commands:
+    CTRL+R    Reset chip
+    CTRL+C    Exit
+
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x15 (USB_UART_HPSYS),boot:0x1c (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40800540
+[38;5;11m0x40800540 - esp_hal::gpio::handle_pin_interrupts
+    at /home/hulthe/.cargo/registry/src/index.crates.io-6f17d22bba15001f/esp-hal-0.22.0/src/gpio/mod.rs:2165
+[39mSPIWP:0xee
+mode:DIO, clock div:2
+load:0x4086c410,len:0xd48
+load:0x4086e610,len:0x2d68
+load:0x40875720,len:0x1800
+entry 0x4086c410
+[0;32mI (23) boot: ESP-IDF v5.1-beta1-378-gea5e0ff298-dirt 2nd stage bootloader[0m
+[0;32mI (23) boot: compile time Jun  7 2023 08:02:08[0m
+[0;32mI (24) boot: chip revision: v0.0[0m
+[0;32mI (28) boot.esp32c6: SPI Speed      : 40MHz[0m
+[0;32mI (33) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (37) boot.esp32c6: SPI Flash Size : 4MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 003f0000[0m
+[0;32mI (81) boot: End of partition table[0m
+[0;32mI (85) esp_image: segment 0: paddr=00010020 vaddr=40800000 size=054b0h ( 21680) load[0m
+[0;32mI (99) esp_image: segment 1: paddr=000154d8 vaddr=420054d8 size=530e0h (340192) map[0m
+[0;32mI (171) esp_image: segment 2: paddr=000685c0 vaddr=408054b0 size=00f20h (  3872) load[0m
+[0;32mI (173) esp_image: segment 3: paddr=000694e8 vaddr=420594e8 size=0a738h ( 42808) map[0m
+[0;32mI (186) esp_image: segment 4: paddr=00073c28 vaddr=408063d0 size=008f0h (  2288) load[0m
+[0;32mI (187) esp_image: segment 5: paddr=00074520 vaddr=40823110 size=00030h (    48) load[0m
+[0;32mI (195) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (200) boot: Disabling RNG early entropy source...[0m
+[33mWARN - WARN[0m
+[31mERROR - ERROR[0m
+[34mDEBUG - DEBUG[0m
+[32mINFO - INFO[0m
+[32mINFO - Press button to continue[0m
+[32mINFO - Let's go![0m
+[32mINFO - esp-wifi configuration EspWifiConfig { rx_queue_size: 5, tx_queue_size: 3, static_rx_buf_num: 10, dynamic_rx_buf_num: 32, static_tx_buf_num: 0, dynamic_tx_buf_num: 32, csi_enable: false, ampdu_rx_enable: true, ampdu_tx_enable: true, amsdu_tx_enable: false, rx_ba_win: 6, max_burst_size: 1, country_code: "SE", country_code_operating_class: 0, mtu: 1492, tick_rate_hz: 100, listen_interval: 3, beacon_timeout: 6, ap_beacon_timeout: 300, failure_retry_cnt: 1, scan_method: 0 }[0m
+[32mINFO - INIT COMPLETE[0m
+[32mINFO - Retrieve bluetooth peripheral[0m
+[32mINFO - @HCIFRAME [4, 14, 3, 1, 0, 0][0m
+[34mDEBUG - The ble_controller_init was initialized[0m
+[32mINFO - Connector created[0m
+[34mDEBUG - command read br addr[0m
+[32mINFO - @HCIFRAME [1, 9, 16, 0][0m
+[32mINFO - @HCIFRAME [4, 14, 10, 1, 9, 16, 0, 41, 22, 67, 202, 76, 66][0m
+[32mINFO - BLE address: [29, 16, 43, ca, 4c, 42][0m
+[34mDEBUG - encode reset command[0m
+[32mINFO - @HCIFRAME [1, 3, 12, 0][0m
+[32mINFO - ble_npl_eventq_remove 0x40808fd4 0x4080b678[0m
+[38;5;11m0x40808fd4 - bluetooth_demo_3::____embassy_main_task::{{closure}}::HEAP
+    at ??:??
+[39m[38;5;11m0x4080b678 - bluetooth_demo_3::____embassy_main_task::{{closure}}::HEAP
+    at ??:??
+[39m[32mINFO - @HCIFRAME [4, 14, 4, 1, 3, 12, 0][0m
+[34mDEBUG - command set event mask[0m
+[32mINFO - @HCIFRAME [1, 1, 12, 8, 255, 255, 255, 255, 255, 255, 255, 255][0m
+[32mINFO - @HCIFRAME [4, 14, 4, 1, 1, 12, 0][0m
+Ok(CommandComplete { num_packets: 1, opcode: 3075, data: [0] })
+[32mINFO - @HCIFRAME [1, 6, 32, 15, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 0][0m
+[32mINFO - @HCIFRAME [4, 14, 4, 1, 6, 32, 0][0m
+Ok(CommandComplete { num_packets: 1, opcode: 8198, data: [0] })
+[32mINFO - @HCIFRAME [1, 8, 32, 32, 26, 2, 1, 6, 5, 2, 15, 24, 18, 24, 12, 9, 69, 108, 32, 115, 99, 104, 108, 105, 122, 111, 115, 3, 25, 193, 3, 0, 0, 0, 0, 0][0m
+[32mINFO - @HCIFRAME [4, 14, 4, 1, 8, 32, 0][0m
+Ok(CommandComplete { num_packets: 1, opcode: 8200, data: [0] })
+[32mINFO - @HCIFRAME [1, 10, 32, 1, 1][0m
+[32mINFO - @HCIFRAME [4, 14, 4, 1, 10, 32, 0][0m
+[32mINFO - Ok(CommandComplete { num_packets: 1, opcode: 8202, data: [0] })[0m
+started advertising
+[32mINFO - @HCIFRAME [4, 62, 19, 1, 0, 0, 0, 1, 0, 13, 135, 205, 203, 123, 4, 24, 0, 0, 0, 42, 0, 1][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 11, 0, 7, 0, 6, 0, 1, 1, 0, 45, 16, 13, 15][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 7, 0, 3, 0, 4, 0, 2, 5, 2][0m
+[34mDEBUG - Wanted = 7, actual = 11[0m
+[34mDEBUG - decoding L2CAP [07, 00, 06, 00, 01, 01, 00, 2d, 10, 0d, 0f][0m
+[34mDEBUG - decoding SM packet [01, 01, 00, 2d, 10, 0d, 0f][0m
+[34mDEBUG - got pairing request[0m
+[34mDEBUG - writing sm command [2, 1, 0, 2d, 10, 0, 0][0m
+[34mDEBUG - writing SM packet [02, 00, 20, 0b, 00, 07, 00, 06, 00, 02, 01, 00, 2d, 10, 00, 00][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 11, 0, 7, 0, 6, 0, 2, 1, 0, 45, 16, 0, 0][0m
+[34mDEBUG - Wanted = 3, actual = 7[0m
+[34mDEBUG - decoding L2CAP [03, 00, 04, 00, 02, 05, 02][0m
+[34mDEBUG - Requested MTU 517, returning 23[0m
+[34mDEBUG - src_handle 0[0m
+[34mDEBUG - data [3, 17, 0][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 7, 0, 3, 0, 4, 0, 3, 23, 0][0m
+[32mINFO - @HCIFRAME [4, 19, 5, 1, 0, 0, 2, 0][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 69, 0, 65, 0, 6, 0, 12, 69, 151, 244, 159, 205, 81, 253, 213, 161, 41, 99, 229, 25, 54, 52, 3, 218, 143, 120, 28, 122, 11, 203, 249, 15, 117, 169, 191, 215, 26, 235, 82, 107, 241, 12, 35, 23, 218, 115, 142, 54, 42, 60, 144, 135, 247, 205, 98, 163, 195, 201, 121, 235, 111, 158, 239, 214, 218, 162, 231, 33, 34, 29, 125][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 11, 0, 7, 0, 4, 0, 8, 1, 0, 255, 255, 58, 43][0m
+[34mDEBUG - Wanted = 65, actual = 69[0m
+[34mDEBUG - decoding L2CAP [41, 00, 06, 00, 0c, 45, 97, f4, 9f, cd, 51, fd, d5, a1, 29, 63, e5, 19, 36, 34, 03, da, 8f, 78, 1c, 7a, 0b, cb, f9, 0f, 75, a9, bf, d7, 1a, eb, 52, 6b, f1, 0c, 23, 17, da, 73, 8e, 36, 2a, 3c, 90, 87, f7, cd, 62, a3, c3, c9, 79, eb, 6f, 9e, ef, d6, da, a2, e7, 21, 22, 1d, 7d][0m
+[34mDEBUG - decoding SM packet [0c, 45, 97, f4, 9f, cd, 51, fd, d5, a1, 29, 63, e5, 19, 36, 34, 03, da, 8f, 78, 1c, 7a, 0b, cb, f9, 0f, 75, a9, bf, d7, 1a, eb, 52, 6b, f1, 0c, 23, 17, da, 73, 8e, 36, 2a, 3c, 90, 87, f7, cd, 62, a3, c3, c9, 79, eb, 6f, 9e, ef, d6, da, a2, e7, 21, 22, 1d, 7d][0m
+[34mDEBUG - got public key[0m
+[34mDEBUG - key len = 64 [45, 97, f4, 9f, cd, 51, fd, d5, a1, 29, 63, e5, 19, 36, 34, 03, da, 8f, 78, 1c, 7a, 0b, cb, f9, 0f, 75, a9, bf, d7, 1a, eb, 52, 6b, f1, 0c, 23, 17, da, 73, 8e, 36, 2a, 3c, 90, 87, f7, cd, 62, a3, c3, c9, 79, eb, 6f, 9e, ef, d6, da, a2, e7, 21, 22, 1d, 7d][0m
+[34mDEBUG - writing sm command [c, 81, b3, 32, ed, e0, e5, ae, ca, 41, a4, 44, 3c, 7d, 78, 6b, a9, f8, ae, e2, 62, a5, ec, c4, 6d, f2, 31, 3f, cc, d, 6e, 38, 6e, de, e, 66, c9, 63, db, ed, 9b, 9d, 4f, 6e, c, 52, f4, 1e, 4f, 25, 9d, bc, 1e, 1e, dc, f3, 1e, 53, 72, 20, ca, 1a, f4, 42, 89][0m
+[34mDEBUG - writing SM packet [02, 00, 20, 45, 00, 41, 00, 06, 00, 0c, 81, b3, 32, ed, e0, e5, ae, ca, 41, a4, 44, 3c, 7d, 78, 6b, a9, f8, ae, e2, 62, a5, ec, c4, 6d, f2, 31, 3f, cc, 0d, 6e, 38, 6e, de, 0e, 66, c9, 63, db, ed, 9b, 9d, 4f, 6e, 0c, 52, f4, 1e, 4f, 25, 9d, bc, 1e, 1e, dc, f3, 1e, 53, 72, 20, ca, 1a, f4, 42, 89][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 69, 0, 65, 0, 6, 0, 12, 129, 179, 50, 237, 224, 229, 174, 202, 65, 164, 68, 60, 125, 120, 107, 169, 248, 174, 226, 98, 165, 236, 196, 109, 242, 49, 63, 204, 13, 110, 56, 110, 222, 14, 102, 201, 99, 219, 237, 155, 157, 79, 110, 12, 82, 244, 30, 79, 37, 157, 188, 30, 30, 220, 243, 30, 83, 114, 32, 202, 26, 244, 66, 137][0m
+[32mINFO - @HCIFRAME [4, 19, 5, 1, 0, 0, 1, 0][0m
+[34mDEBUG - writing sm command [3, d1, 83, 7, ec, 80, 1d, be, 18, 61, b1, f5, e8, 58, 52, be, 96][0m
+[34mDEBUG - writing SM packet [02, 00, 20, 15, 00, 11, 00, 06, 00, 03, d1, 83, 07, ec, 80, 1d, be, 18, 61, b1, f5, e8, 58, 52, be, 96][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 21, 0, 17, 0, 6, 0, 3, 209, 131, 7, 236, 128, 29, 190, 24, 97, 177, 245, 232, 88, 82, 190, 150][0m
+[34mDEBUG - Wanted = 7, actual = 11[0m
+[34mDEBUG - decoding L2CAP [07, 00, 04, 00, 08, 01, 00, ff, ff, 3a, 2b][0m
+[34mDEBUG - src_handle 0[0m
+[34mDEBUG - data [1, 8, 1, 0, a][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 9, 0, 5, 0, 4, 0, 1, 8, 1, 0, 10][0m
+[32mINFO - @HCIFRAME [4, 19, 5, 1, 0, 0, 2, 0][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 21, 0, 17, 0, 6, 0, 4, 203, 38, 135, 39, 209, 149, 61, 211, 103, 50, 195, 33, 156, 141, 5, 51][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 11, 0, 7, 0, 4, 0, 16, 1, 0, 255, 255, 0, 40][0m
+[34mDEBUG - Wanted = 17, actual = 21[0m
+[34mDEBUG - decoding L2CAP [11, 00, 06, 00, 04, cb, 26, 87, 27, d1, 95, 3d, d3, 67, 32, c3, 21, 9c, 8d, 05, 33][0m
+[34mDEBUG - decoding SM packet [04, cb, 26, 87, 27, d1, 95, 3d, d3, 67, 32, c3, 21, 9c, 8d, 05, 33][0m
+[34mDEBUG - got pairing random [cb, 26, 87, 27, d1, 95, 3d, d3, 67, 32, c3, 21, 9c, 8d, 05, 33][0m
+[34mDEBUG - writing sm command [4, 8d, 1a, a7, c2, 4a, db, e0, 52, b4, 9f, ca, 57, 81, 26, 3e, f1][0m
+[34mDEBUG - writing SM packet [02, 00, 20, 15, 00, 11, 00, 06, 00, 04, 8d, 1a, a7, c2, 4a, db, e0, 52, b4, 9f, ca, 57, 81, 26, 3e, f1][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 21, 0, 17, 0, 6, 0, 4, 141, 26, 167, 194, 74, 219, 224, 82, 180, 159, 202, 87, 129, 38, 62, 241][0m
+[32mINFO - Display code is 497596[0m
+[34mDEBUG - Wanted = 7, actual = 11[0m
+[34mDEBUG - decoding L2CAP [07, 00, 04, 00, 10, 01, 00, ff, ff, 00, 28][0m
+[34mDEBUG - found! 1[0m
+[34mDEBUG - src_handle 0[0m
+[34mDEBUG - data [11, 6, 1, 0, b, 0, 12, 18][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 12, 0, 8, 0, 4, 0, 17, 6, 1, 0, 11, 0, 18, 24][0m
+[32mINFO - @HCIFRAME [4, 19, 5, 1, 0, 0, 2, 0][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 11, 0, 7, 0, 4, 0, 16, 12, 0, 255, 255, 0, 40][0m
+[34mDEBUG - Wanted = 7, actual = 11[0m
+[34mDEBUG - decoding L2CAP [07, 00, 04, 00, 10, 0c, 00, ff, ff, 00, 28][0m
+[34mDEBUG - found! c[0m
+[34mDEBUG - src_handle 0[0m
+[34mDEBUG - data [11, 6, c, 0, e, 0, a, 18][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 12, 0, 8, 0, 4, 0, 17, 6, 12, 0, 14, 0, 10, 24][0m
+[32mINFO - @HCIFRAME [4, 19, 5, 1, 0, 0, 1, 0][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 11, 0, 7, 0, 4, 0, 16, 15, 0, 255, 255, 0, 40][0m
+[34mDEBUG - Wanted = 7, actual = 11[0m
+[34mDEBUG - decoding L2CAP [07, 00, 04, 00, 10, 0f, 00, ff, ff, 00, 28][0m
+[34mDEBUG - found! f[0m
+[34mDEBUG - src_handle 0[0m
+[34mDEBUG - data [11, 6, f, 0, 12, 0, f, 18][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 12, 0, 8, 0, 4, 0, 17, 6, 15, 0, 18, 0, 15, 24][0m
+[32mINFO - @HCIFRAME [4, 19, 5, 1, 0, 0, 1, 0][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 11, 0, 7, 0, 4, 0, 16, 19, 0, 255, 255, 0, 40][0m
+[34mDEBUG - Wanted = 7, actual = 11[0m
+[34mDEBUG - decoding L2CAP [07, 00, 04, 00, 10, 13, 00, ff, ff, 00, 28][0m
+[34mDEBUG - src_handle 0[0m
+[34mDEBUG - data [1, 10, 13, 0, a][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 9, 0, 5, 0, 4, 0, 1, 16, 19, 0, 10][0m
+[32mINFO - @HCIFRAME [4, 19, 5, 1, 0, 0, 1, 0][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 11, 0, 7, 0, 4, 0, 16, 1, 0, 255, 255, 1, 40][0m
+[34mDEBUG - Wanted = 7, actual = 11[0m
+[34mDEBUG - decoding L2CAP [07, 00, 04, 00, 10, 01, 00, ff, ff, 01, 28][0m
+[34mDEBUG - src_handle 0[0m
+[34mDEBUG - data [1, 10, 1, 0, a][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 9, 0, 5, 0, 4, 0, 1, 16, 1, 0, 10][0m
+[32mINFO - @HCIFRAME [4, 19, 5, 1, 0, 0, 1, 0][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 11, 0, 7, 0, 4, 0, 8, 1, 0, 18, 0, 2, 40][0m
+[34mDEBUG - Wanted = 7, actual = 11[0m
+[34mDEBUG - decoding L2CAP [07, 00, 04, 00, 08, 01, 00, 12, 00, 02, 28][0m
+[34mDEBUG - src_handle 0[0m
+[34mDEBUG - data [1, 8, 1, 0, a][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 9, 0, 5, 0, 4, 0, 1, 8, 1, 0, 10][0m
+[32mINFO - @HCIFRAME [4, 19, 5, 1, 0, 0, 1, 0][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 11, 0, 7, 0, 4, 0, 8, 1, 0, 18, 0, 3, 40][0m
+[34mDEBUG - Wanted = 7, actual = 11[0m
+[34mDEBUG - decoding L2CAP [07, 00, 04, 00, 08, 01, 00, 12, 00, 03, 28][0m
+[34mDEBUG - found! Uuid16(2803) 2[0m
+[34mDEBUG - src_handle 0[0m
+[34mDEBUG - data [9, 7, 2, 0, 2, 3, 0, 4a, 2a][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 13, 0, 9, 0, 4, 0, 9, 7, 2, 0, 2, 3, 0, 74, 42][0m
+[32mINFO - @HCIFRAME [4, 19, 5, 1, 0, 0, 1, 0][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 11, 0, 7, 0, 4, 0, 8, 3, 0, 18, 0, 3, 40][0m
+[34mDEBUG - Wanted = 7, actual = 11[0m
+[34mDEBUG - decoding L2CAP [07, 00, 04, 00, 08, 03, 00, 12, 00, 03, 28][0m
+[34mDEBUG - found! Uuid16(2803) 4[0m
+[34mDEBUG - src_handle 0[0m
+[34mDEBUG - data [9, 7, 4, 0, 2, 5, 0, 4b, 2a][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 13, 0, 9, 0, 4, 0, 9, 7, 4, 0, 2, 5, 0, 75, 42][0m
+[32mINFO - @HCIFRAME [4, 19, 5, 1, 0, 0, 1, 0][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 11, 0, 7, 0, 4, 0, 8, 5, 0, 18, 0, 3, 40][0m
+[34mDEBUG - Wanted = 7, actual = 11[0m
+[34mDEBUG - decoding L2CAP [07, 00, 04, 00, 08, 05, 00, 12, 00, 03, 28][0m
+[34mDEBUG - found! Uuid16(2803) 6[0m
+[34mDEBUG - src_handle 0[0m
+[34mDEBUG - data [9, 7, 6, 0, 12, 7, 0, 4d, 2a][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 13, 0, 9, 0, 4, 0, 9, 7, 6, 0, 18, 7, 0, 77, 42][0m
+[32mINFO - @HCIFRAME [4, 19, 5, 1, 0, 0, 1, 0][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 11, 0, 7, 0, 4, 0, 8, 7, 0, 18, 0, 3, 40][0m
+[34mDEBUG - Wanted = 7, actual = 11[0m
+[34mDEBUG - decoding L2CAP [07, 00, 04, 00, 08, 07, 00, 12, 00, 03, 28][0m
+[34mDEBUG - found! Uuid16(2803) 10[0m
+[34mDEBUG - src_handle 0[0m
+[34mDEBUG - data [9, 7, a, 0, a, b, 0, 4e, 2a][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 13, 0, 9, 0, 4, 0, 9, 7, 10, 0, 10, 11, 0, 78, 42][0m
+[32mINFO - @HCIFRAME [4, 19, 5, 1, 0, 0, 1, 0][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 11, 0, 7, 0, 4, 0, 8, 11, 0, 18, 0, 3, 40][0m
+[34mDEBUG - Wanted = 7, actual = 11[0m
+[34mDEBUG - decoding L2CAP [07, 00, 04, 00, 08, 0b, 00, 12, 00, 03, 28][0m
+[34mDEBUG - found! Uuid16(2803) 13[0m
+[34mDEBUG - src_handle 0[0m
+[34mDEBUG - data [9, 7, d, 0, 2, e, 0, 50, 2a][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 13, 0, 9, 0, 4, 0, 9, 7, 13, 0, 2, 14, 0, 80, 42][0m
+[32mINFO - @HCIFRAME [4, 19, 5, 1, 0, 0, 1, 0][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 11, 0, 7, 0, 4, 0, 8, 14, 0, 18, 0, 3, 40][0m
+[34mDEBUG - Wanted = 7, actual = 11[0m
+[34mDEBUG - decoding L2CAP [07, 00, 04, 00, 08, 0e, 00, 12, 00, 03, 28][0m
+[34mDEBUG - found! Uuid16(2803) 16[0m
+[34mDEBUG - src_handle 0[0m
+[34mDEBUG - data [9, 7, 10, 0, 12, 11, 0, 19, 2a][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 13, 0, 9, 0, 4, 0, 9, 7, 16, 0, 18, 17, 0, 25, 42][0m
+[32mINFO - @HCIFRAME [4, 19, 5, 1, 0, 0, 1, 0][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 11, 0, 7, 0, 4, 0, 8, 17, 0, 18, 0, 3, 40][0m
+[34mDEBUG - Wanted = 7, actual = 11[0m
+[34mDEBUG - decoding L2CAP [07, 00, 04, 00, 08, 11, 00, 12, 00, 03, 28][0m
+[34mDEBUG - src_handle 0[0m
+[34mDEBUG - data [1, 8, 11, 0, a][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 9, 0, 5, 0, 4, 0, 1, 8, 17, 0, 10][0m
+[32mINFO - @HCIFRAME [4, 19, 5, 1, 0, 0, 1, 0][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 9, 0, 5, 0, 4, 0, 4, 8, 0, 9, 0][0m
+[34mDEBUG - Wanted = 5, actual = 9[0m
+[34mDEBUG - decoding L2CAP [05, 00, 04, 00, 04, 08, 00, 09, 00][0m
+[34mDEBUG - found! Uuid16(2902) 8[0m
+[34mDEBUG - found! Uuid16(2908) 9[0m
+[34mDEBUG - src_handle 0[0m
+[34mDEBUG - data [5, 1, 8, 0, 2, 29, 9, 0, 8, 29][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 14, 0, 10, 0, 4, 0, 5, 1, 8, 0, 2, 41, 9, 0, 8, 41][0m
+[32mINFO - @HCIFRAME [4, 19, 5, 1, 0, 0, 1, 0][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 21, 0, 17, 0, 6, 0, 13, 13, 191, 222, 158, 50, 203, 7, 174, 249, 51, 24, 244, 133, 221, 236, 86][0m
+[34mDEBUG - Wanted = 17, actual = 21[0m
+[34mDEBUG - decoding L2CAP [11, 00, 06, 00, 0d, 0d, bf, de, 9e, 32, cb, 07, ae, f9, 33, 18, f4, 85, dd, ec, 56][0m
+[34mDEBUG - decoding SM packet [0d, 0d, bf, de, 9e, 32, cb, 07, ae, f9, 33, 18, f4, 85, dd, ec, 56][0m
+[34mDEBUG - got dhkey_check [0d, bf, de, 9e, 32, cb, 07, ae, f9, 33, 18, f4, 85, dd, ec, 56][0m
+[34mDEBUG - f6([0m
+[34mDEBUG -   na = Nonce(33058d9c21c33267d33d95d1278726cb),[0m
+[34mDEBUG -   nb = Nonce(f13e268157ca9fb452e0db4ac2a71a8d),[0m
+[34mDEBUG -   r = 0,[0m
+[34mDEBUG -   ioa = IoCap([2d, 00, 01]),[0m
+[34mDEBUG -   peer_address = Addr([00, 04, 7b, cb, cd, 87, 0d]),[0m
+[34mDEBUG -   local_address = Addr([00, 42, 4c, ca, 43, 16, 29]),[0m
+[34mDEBUG - );[0m
+[34mDEBUG - writing sm command [d, d6, 4e, c9, 73, 28, 61, 67, b6, 6d, 23, c1, b3, f7, bf, 92, fd][0m
+[34mDEBUG - writing SM packet [02, 00, 20, 15, 00, 11, 00, 06, 00, 0d, d6, 4e, c9, 73, 28, 61, 67, b6, 6d, 23, c1, b3, f7, bf, 92, fd][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 21, 0, 17, 0, 6, 0, 13, 214, 78, 201, 115, 40, 97, 103, 182, 109, 35, 193, 179, 247, 191, 146, 253][0m
+[32mINFO - @HCIFRAME [4, 19, 5, 1, 0, 0, 1, 0][0m
+[32mINFO - @HCIFRAME [4, 62, 13, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0][0m
+[32mINFO - @HCIFRAME [1, 26, 32, 18, 0, 0, 34, 249, 82, 190, 58, 112, 119, 3, 108, 138, 11, 121, 144, 137, 225, 41][0m
+[32mINFO - @HCIFRAME [4, 14, 6, 1, 26, 32, 0, 0, 0][0m
+[32mINFO - @HCIFRAME [4, 8, 4, 0, 0, 0, 1][0m
+[33mWARN - Ignoring unknown event 08 data = [00, 00, 00, 01][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 7, 0, 3, 0, 4, 0, 10, 14, 0][0m
+[34mDEBUG - Wanted = 3, actual = 7[0m
+[34mDEBUG - decoding L2CAP [03, 00, 04, 00, 0a, 0e, 00][0m
+[32mINFO - read_device_info[0m
+[34mDEBUG - src_handle 0[0m
+[34mDEBUG - data [b, 2, 8a, 24, 66, 82, 34, 36][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 12, 0, 8, 0, 4, 0, 11, 2, 138, 36, 102, 130, 52, 54][0m
+[32mINFO - @HCIFRAME [4, 19, 5, 1, 0, 0, 1, 0][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 7, 0, 3, 0, 4, 0, 10, 3, 0][0m
+[34mDEBUG - Wanted = 3, actual = 7[0m
+[34mDEBUG - decoding L2CAP [03, 00, 04, 00, 0a, 03, 00][0m
+[32mINFO - read_hid_information[0m
+[34mDEBUG - src_handle 0[0m
+[34mDEBUG - data [b, 11, 1, 0, 1][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 9, 0, 5, 0, 4, 0, 11, 17, 1, 0, 1][0m
+[32mINFO - @HCIFRAME [4, 19, 5, 1, 0, 0, 1, 0][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 7, 0, 3, 0, 4, 0, 10, 7, 0][0m
+[34mDEBUG - Wanted = 3, actual = 7[0m
+[34mDEBUG - decoding L2CAP [03, 00, 04, 00, 0a, 07, 00][0m
+[32mINFO - read_hid_report[0m
+[34mDEBUG - src_handle 0[0m
+[34mDEBUG - data [b, 0, 0, 0, 0, 0, 0, 0, 0][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 13, 0, 9, 0, 4, 0, 11, 0, 0, 0, 0, 0, 0, 0, 0][0m
+[32mINFO - @HCIFRAME [4, 19, 5, 1, 0, 0, 1, 0][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 7, 0, 3, 0, 4, 0, 10, 9, 0][0m
+[34mDEBUG - Wanted = 3, actual = 7[0m
+[34mDEBUG - decoding L2CAP [03, 00, 04, 00, 0a, 09, 00][0m
+[34mDEBUG - src_handle 0[0m
+[34mDEBUG - data [b, 1, 1][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 7, 0, 3, 0, 4, 0, 11, 1, 1][0m
+[32mINFO - @HCIFRAME [4, 19, 5, 1, 0, 0, 1, 0][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 7, 0, 3, 0, 4, 0, 10, 11, 0][0m
+[34mDEBUG - Wanted = 3, actual = 7[0m
+[34mDEBUG - decoding L2CAP [03, 00, 04, 00, 0a, 0b, 00][0m
+[32mINFO - read_protocol_mode[0m
+[34mDEBUG - src_handle 0[0m
+[34mDEBUG - data [b, 1][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 6, 0, 2, 0, 4, 0, 11, 1][0m
+[32mINFO - @HCIFRAME [4, 19, 5, 1, 0, 0, 1, 0][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 7, 0, 3, 0, 4, 0, 10, 14, 0][0m
+[34mDEBUG - Wanted = 3, actual = 7[0m
+[34mDEBUG - decoding L2CAP [03, 00, 04, 00, 0a, 0e, 00][0m
+[32mINFO - read_device_info[0m
+[34mDEBUG - src_handle 0[0m
+[34mDEBUG - data [b, 2, 8a, 24, 66, 82, 34, 36][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 12, 0, 8, 0, 4, 0, 11, 2, 138, 36, 102, 130, 52, 54][0m
+[32mINFO - @HCIFRAME [4, 19, 5, 1, 0, 0, 1, 0][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 7, 0, 3, 0, 4, 0, 10, 17, 0][0m
+[34mDEBUG - Wanted = 3, actual = 7[0m
+[34mDEBUG - decoding L2CAP [03, 00, 04, 00, 0a, 11, 00][0m
+[32mINFO - read_battery_level[0m
+[34mDEBUG - src_handle 0[0m
+[34mDEBUG - data [b, 64][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 6, 0, 2, 0, 4, 0, 11, 100][0m
+[32mINFO - @HCIFRAME [4, 19, 5, 1, 0, 0, 1, 0][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 7, 0, 3, 0, 4, 0, 10, 8, 0][0m
+[34mDEBUG - Wanted = 3, actual = 7[0m
+[34mDEBUG - decoding L2CAP [03, 00, 04, 00, 0a, 08, 00][0m
+[34mDEBUG - src_handle 0[0m
+[34mDEBUG - data [b, 0, 0][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 7, 0, 3, 0, 4, 0, 11, 0, 0][0m
+[32mINFO - @HCIFRAME [4, 19, 5, 1, 0, 0, 1, 0][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 9, 0, 5, 0, 4, 0, 18, 18, 0, 1, 0][0m
+[34mDEBUG - Wanted = 5, actual = 9[0m
+[34mDEBUG - decoding L2CAP [05, 00, 04, 00, 12, 12, 00, 01, 00][0m
+[34mDEBUG - src_handle 0[0m
+[34mDEBUG - data [13][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 5, 0, 1, 0, 4, 0, 19][0m
+[32mINFO - @HCIFRAME [4, 19, 5, 1, 0, 0, 1, 0][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 9, 0, 5, 0, 4, 0, 18, 8, 0, 1, 0][0m
+[34mDEBUG - Wanted = 5, actual = 9[0m
+[34mDEBUG - decoding L2CAP [05, 00, 04, 00, 12, 08, 00, 01, 00][0m
+[34mDEBUG - src_handle 0[0m
+[34mDEBUG - data [13][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 5, 0, 1, 0, 4, 0, 19][0m
+[32mINFO - @HCIFRAME [4, 19, 5, 1, 0, 0, 1, 0][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 7, 0, 3, 0, 4, 0, 10, 5, 0][0m
+[34mDEBUG - Wanted = 3, actual = 7[0m
+[34mDEBUG - decoding L2CAP [03, 00, 04, 00, 0a, 05, 00][0m
+[32mINFO - read_hid_report_map 0 255[0m
+[34mDEBUG - src_handle 0[0m
+[34mDEBUG - data [b, 5, 1, 9, 6, a1, 1, 85, 1, 5, 7, 19, e0, 29, e7, 15, 0, 25, 1, 75, 1, 95, 8][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 27, 0, 23, 0, 4, 0, 11, 5, 1, 9, 6, 161, 1, 133, 1, 5, 7, 25, 224, 41, 231, 21, 0, 37, 1, 117, 1, 149, 8][0m
+[32mINFO - @HCIFRAME [4, 19, 5, 1, 0, 0, 1, 0][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 9, 0, 5, 0, 4, 0, 12, 5, 0, 22, 0][0m
+[34mDEBUG - Wanted = 5, actual = 9[0m
+[34mDEBUG - decoding L2CAP [05, 00, 04, 00, 0c, 05, 00, 16, 00][0m
+[32mINFO - read_hid_report_map 22 255[0m
+[34mDEBUG - src_handle 0[0m
+[34mDEBUG - data [d, 81, 2, 95, 1, 75, 8, 81, 1, 95, 5, 75, 1, 5, 8, 19, 1, 29, 5, 91, 2, 95, 1][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 27, 0, 23, 0, 4, 0, 13, 129, 2, 149, 1, 117, 8, 129, 1, 149, 5, 117, 1, 5, 8, 25, 1, 41, 5, 145, 2, 149, 1][0m
+[32mINFO - @HCIFRAME [4, 19, 5, 1, 0, 0, 1, 0][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 9, 0, 5, 0, 4, 0, 12, 5, 0, 44, 0][0m
+[34mDEBUG - Wanted = 5, actual = 9[0m
+[34mDEBUG - decoding L2CAP [05, 00, 04, 00, 0c, 05, 00, 2c, 00][0m
+[32mINFO - read_hid_report_map 44 255[0m
+[34mDEBUG - src_handle 0[0m
+[34mDEBUG - data [d, 75, 3, 91, 1, 95, 6, 75, 8, 15, 0, 25, 65, 5, 7, 19, 0, 29, 65, 81, 0, c0][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 26, 0, 22, 0, 4, 0, 13, 117, 3, 145, 1, 149, 6, 117, 8, 21, 0, 37, 101, 5, 7, 25, 0, 41, 101, 129, 0, 192][0m
+[32mINFO - @HCIFRAME [4, 19, 5, 1, 0, 0, 1, 0][0m
+[32mINFO - notify hid report (pressed = true)[0m
+[34mDEBUG - src_handle 0[0m
+[34mDEBUG - data [1b, 7, 0, 0, 0, 4, 0, 0, 0, 0, 0][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 15, 0, 11, 0, 4, 0, 27, 7, 0, 0, 0, 4, 0, 0, 0, 0, 0][0m
+[32mINFO - @HCIFRAME [4, 19, 5, 1, 0, 0, 1, 0][0m
+[32mINFO - notify hid report (pressed = false)[0m
+[34mDEBUG - src_handle 0[0m
+[34mDEBUG - data [1b, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 15, 0, 11, 0, 4, 0, 27, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0][0m
+[32mINFO - @HCIFRAME [4, 19, 5, 1, 0, 0, 1, 0][0m
+[32mINFO - notify hid report (pressed = true)[0m
+[34mDEBUG - src_handle 0[0m
+[34mDEBUG - data [1b, 7, 0, 0, 0, 4, 0, 0, 0, 0, 0][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 15, 0, 11, 0, 4, 0, 27, 7, 0, 0, 0, 4, 0, 0, 0, 0, 0][0m
+[32mINFO - @HCIFRAME [4, 19, 5, 1, 0, 0, 1, 0][0m
+[32mINFO - notify hid report (pressed = false)[0m
+[34mDEBUG - src_handle 0[0m
+[34mDEBUG - data [1b, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 15, 0, 11, 0, 4, 0, 27, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0][0m
+[32mINFO - @HCIFRAME [4, 19, 5, 1, 0, 0, 1, 0][0m
+[32mINFO - notify hid report (pressed = true)[0m
+[34mDEBUG - src_handle 0[0m
+[34mDEBUG - data [1b, 7, 0, 0, 0, 4, 0, 0, 0, 0, 0][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 15, 0, 11, 0, 4, 0, 27, 7, 0, 0, 0, 4, 0, 0, 0, 0, 0][0m
+[32mINFO - @HCIFRAME [4, 19, 5, 1, 0, 0, 1, 0][0m
+[32mINFO - notify hid report (pressed = false)[0m
+[34mDEBUG - src_handle 0[0m
+[34mDEBUG - data [1b, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 15, 0, 11, 0, 4, 0, 27, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0][0m
+[32mINFO - @HCIFRAME [4, 19, 5, 1, 0, 0, 1, 0][0m
+[32mINFO - notify hid report (pressed = true)[0m
+[34mDEBUG - src_handle 0[0m
+[34mDEBUG - data [1b, 7, 0, 0, 0, 4, 0, 0, 0, 0, 0][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 15, 0, 11, 0, 4, 0, 27, 7, 0, 0, 0, 4, 0, 0, 0, 0, 0][0m
+[32mINFO - @HCIFRAME [4, 19, 5, 1, 0, 0, 1, 0][0m
+[32mINFO - notify hid report (pressed = false)[0m
+[34mDEBUG - src_handle 0[0m
+[34mDEBUG - data [1b, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 15, 0, 11, 0, 4, 0, 27, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0][0m
+[32mINFO - @HCIFRAME [4, 19, 5, 1, 0, 0, 1, 0][0m
+[32mINFO - notify hid report (pressed = true)[0m
+[34mDEBUG - src_handle 0[0m
+[34mDEBUG - data [1b, 7, 0, 0, 0, 4, 0, 0, 0, 0, 0][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 15, 0, 11, 0, 4, 0, 27, 7, 0, 0, 0, 4, 0, 0, 0, 0, 0][0m
+[32mINFO - @HCIFRAME [4, 19, 5, 1, 0, 0, 1, 0][0m
+[32mINFO - notify hid report (pressed = false)[0m
+[34mDEBUG - src_handle 0[0m
+[34mDEBUG - data [1b, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0][0m
+[32mINFO - @HCIFRAME [2, 0, 32, 15, 0, 11, 0, 4, 0, 27, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0][0m
+[32mINFO - @HCIFRAME [4, 19, 5, 1, 0, 0, 1, 0][0m
