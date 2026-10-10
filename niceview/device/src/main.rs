@@ -4,7 +4,6 @@
 
 mod nice_view;
 
-use alloc::format;
 use embassy_executor::Spawner;
 use embassy_time::{Duration, Timer};
 use esp_backtrace as _;
@@ -18,11 +17,17 @@ use esp_hal::{
     spi::{self, master::Spi},
 };
 use nice_view::NiceView;
-use niceview_lib::{KeyboardDisplay, TextVariant};
+use niceview_lib::video_decoder::VideoDecoder;
+use niceview_lib::{color::Color, KeyboardDisplay, TextVariant};
 
 extern crate alloc;
 
 esp_bootloader_esp_idf::esp_app_desc!();
+
+const BAD_APPLE_COMPRESSED: &[u8; 1669901] = include_bytes!("../resources/video/ba.bin");
+
+const FRAMES_PER_SECOND: u64 = 30;
+const FRAME_DURATION_MS: u64 = 1000 / FRAMES_PER_SECOND;
 
 #[esp_rtos::main]
 async fn main(_spawner: Spawner) -> ! {
@@ -77,23 +82,33 @@ async fn main(_spawner: Spawner) -> ! {
     nice_view.fill_white();
     nice_view.flush().await;
 
-    let mut seconds = 0;
-    let mut millis = 0;
-
-    let sleep_time = 100;
+    let mut frames = {
+        let mut f: VideoDecoder<{ NiceView::WIDTH }, { NiceView::HEIGHT }> =
+            VideoDecoder::new(BAD_APPLE_COMPRESSED);
+        f.get_frame();
+        f
+    };
 
     loop {
         nice_view.fill_white();
         nice_view.draw_text("Your move Yoda", 10, 20, TextVariant::LargeBold);
-        nice_view.draw_text(&format!("{}", seconds), 78, 40, TextVariant::LargeBold);
+
+        nice_view.fill_white();
+        for x in 0..NiceView::WIDTH {
+            for y in 0..NiceView::HEIGHT {
+                let pixel = frames.buffer[x][y];
+                if pixel {
+                    nice_view.draw_pixel(x, y, Color::White);
+                } else {
+                    nice_view.draw_pixel(x, y, Color::Black);
+                }
+            }
+        }
+
         nice_view.flush().await;
 
-        Timer::after(Duration::from_millis(sleep_time)).await;
-        millis += sleep_time;
-        if millis >= 1000 {
-            seconds += 1;
-            millis -= 1000;
-        }
+        Timer::after(Duration::from_millis(FRAME_DURATION_MS)).await;
+        frames.get_frame();
     }
 }
 
