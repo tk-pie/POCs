@@ -8,8 +8,10 @@ eframe = "0.31.0"
 env_logger = "0.11.6"
 log = "0.4.26"
 niceview-lib = { workspace = true }
-embassy-time = "0.5.1"
+embassy-time = {version = "0.5.1"}
 
+[target.'cfg(any(windows,unix))'.dependencies]
+embassy-time = {version = "0.5.1", features=["std"]}
 
 [features]
 default = ["bad_apple"]
