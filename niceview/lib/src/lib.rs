@@ -6,8 +6,17 @@
 
 use color::Color;
 
+/// Display width in pixels
+pub const DISP_WIDTH: usize = 160;
+
+/// Display height in pixels
+pub const DISP_HEIGHT: usize = 68;
+
 /// Colors.
 pub mod color;
+
+/// Video decoder
+pub mod video_decoder;
 
 /// Image handling.
 mod image;
@@ -24,10 +33,10 @@ pub use crate::images::generated::Icon;
 #[allow(async_fn_in_trait)]
 pub trait KeyboardDisplay {
     /// Display width in pixels.
-    const WIDTH: usize = 160;
+    const WIDTH: usize = DISP_WIDTH;
 
     /// Display height in pixels.
-    const HEIGHT: usize = 68;
+    const HEIGHT: usize = DISP_HEIGHT;
 
     /// Send a clear command to the screen.
     /// Effectively equivalent to [Self::fill_white] + [Self::flush] but faster.

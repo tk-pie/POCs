@@ -3273,6 +3273,7 @@ dependencies = [
  "eg-font-converter",
  "embedded-graphics",
  "log",
+ "miniz_oxide 0.9.1",
  "proc-macro2",
  "quote",
  "rust-format",
@@ -3284,6 +3285,7 @@ name = "niceview-testing"
 version = "0.1.0"
 dependencies = [
  "eframe",
+ "embassy-time",
  "env_logger",
  "log",
  "niceview-lib",

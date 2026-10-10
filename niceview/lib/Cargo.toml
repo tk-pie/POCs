@@ -8,6 +8,8 @@ log = "0.4.26"
 eg-bdf = { git = "https://github.com/embedded-graphics/bdf", rev = "1527e39966d3d7fca698c29699752fbb66ae5bfa" }
 embedded-graphics = "0.8.1"
 zerocopy = { version = "0.8.25", features = ["derive", "zerocopy-derive"] }
+miniz_oxide = {version = "0.9.1"} 
+
 
 [build-dependencies]
 eg-font-converter = { git = "https://github.com/embedded-graphics/bdf", rev = "1527e39966d3d7fca698c29699752fbb66ae5bfa" }
